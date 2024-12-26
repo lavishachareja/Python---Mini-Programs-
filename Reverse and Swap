@@ -1,0 +1,17 @@
+def reverse_words_order_and_swap_cases(sentence):
+    sen = ""
+    for c in sentence:
+        if c.islower():
+            sen = sen + c.upper()
+        elif c.isupper():
+            sen = sen + c.lower()
+        else:
+            sen = sen + c
+    temp = sen.split()
+    temp = temp[::-1]
+    s = " ".join(temp)
+    return s
+if __name__ == '__main__':
+    sentence = input()
+    result = reverse_words_order_and_swap_cases(sentence)
+    print(result)
